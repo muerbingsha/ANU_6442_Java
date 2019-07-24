@@ -8,7 +8,7 @@
   <tbody>
     <tr>
       <td>Parameterized Test</td>
-      <td></td>
+      <td>BusinessLogic.java / BusinessLogicTest.java / Main.java</td>
     </tr>
   </tbody>
 </table>
