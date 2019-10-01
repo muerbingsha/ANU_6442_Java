@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sample_Dao</string>
+    <string name="edit_message">Edit Message</string>
+    <string name="btn_send">Button Send</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_composer">Composer</string>
+    <string name="delta_delete">Delta delete</string>
+    <string name="recreate_database">Recreate database</string>
+    <string name="title_movie">title_movie</string>
+    <string name="title_director">title_director</string>
+</resources>
