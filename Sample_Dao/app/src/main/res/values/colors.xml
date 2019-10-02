@@ -6,4 +6,7 @@
     <color name="cursorAccent">#F34F8C</color>
     <color name="controlNormal">#E995B3</color>
     <color name="controlActivated">#FDCBDE</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="gray">#7CD5D5D5</color>
 </resources>

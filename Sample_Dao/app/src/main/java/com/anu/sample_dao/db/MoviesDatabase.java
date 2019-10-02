@@ -15,7 +15,8 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
 @Database(entities = {Movie.class, Director.class},
-        version = 1)
+        version = 1,
+        exportSchema = false)
 public abstract class MoviesDatabase extends RoomDatabase {
 
 
