@@ -35,7 +35,7 @@ public class MovieActivity extends AppCompatActivity {
     }
 
     public void setToolbar(@NonNull String title) {
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.movie_toolbar);
         toolbar.setTitle(title);
         setSupportActionBar(toolbar);
     }
@@ -44,7 +44,7 @@ public class MovieActivity extends AppCompatActivity {
 
 
     private void initView() {
-        BottomNavigationView navigation = findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.movie_nav);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -62,21 +62,21 @@ public class MovieActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showSaveDialog();
-            }
-        });
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                showSaveDialog();
+//            }
+//        });
     }
 
 
     private void showFragment(final Fragment fragment) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentHolder, fragment);
-        fragmentTransaction.commitNow();
-        shownFragment = fragment;
+//        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//        fragmentTransaction.replace(R.id.fragmentHolder, fragment);
+//        fragmentTransaction.commitNow();
+//        shownFragment = fragment;
     }
 
     private void showSaveDialog() {
