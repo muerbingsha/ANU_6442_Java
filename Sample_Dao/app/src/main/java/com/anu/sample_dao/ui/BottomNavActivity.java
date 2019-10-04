@@ -1,4 +1,4 @@
-package com.anu.sample_dao;
+package com.anu.sample_dao.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.anu.sample_dao.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 

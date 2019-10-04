@@ -1,10 +1,12 @@
-package com.anu.sample_dao;
+package com.anu.sample_dao.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.anu.sample_dao.R;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 

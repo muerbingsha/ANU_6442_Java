@@ -1,4 +1,4 @@
-package com.anu.sample_dao;
+package com.anu.sample_dao.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.anu.sample_dao.R;
 import com.anu.sample_dao.db.MoviesDatabase;
 import com.anu.sample_dao.director.DirectorFragment;
 import com.anu.sample_dao.movie.MovieFragment;

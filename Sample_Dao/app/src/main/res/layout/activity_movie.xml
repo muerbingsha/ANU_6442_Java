@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context=".MovieActivity">
+    tools:context=".ui.MovieActivity">
 
     <!-- id can has same value -->
     <androidx.appcompat.widget.Toolbar

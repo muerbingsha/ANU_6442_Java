@@ -1,4 +1,4 @@
-package com.anu.sample_dao;
+package com.anu.sample_dao.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.anu.sample_dao.R;
 
 /**
  * import android.support.v7.widget.Toolbar with setSupportActionBar()

@@ -1,4 +1,4 @@
-package com.anu.sample_dao;
+package com.anu.sample_dao.ui;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar; // to compat lower version
 
+import com.anu.sample_dao.R;
 
 
 public class ToolbarActivity extends AppCompatActivity {

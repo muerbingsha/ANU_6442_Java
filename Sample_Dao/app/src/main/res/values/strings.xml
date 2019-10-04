@@ -8,4 +8,17 @@
     <string name="recreate_database">Recreate database</string>
     <string name="title_movie">title_movie</string>
     <string name="title_director">title_director</string>
+    <string name="mainui">MainUI</string>
+    <string name="login">Sign In/Sign Up</string>
+    <string name="play">Play</string>
+    <string name="about">About</string>
+    <string name="logo">Match Words</string>
+    <string name="sub_title">TuteHub presents @2019</string>
+    <string name="user">Sign in / Sign up</string>
+    <string name="about_donate">Donate</string>
+    <string name="about_tutehub">TuteHub</string>
+    <string name="about_home">Home</string>
+    <string name="user_sign_up">Sign Up</string>
+    <string name="user_sign_in">Sign In</string>
+    <string name="about_store">Store</string>
 </resources>
