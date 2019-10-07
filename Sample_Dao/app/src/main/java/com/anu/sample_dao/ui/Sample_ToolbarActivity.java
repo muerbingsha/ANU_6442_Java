@@ -11,7 +11,7 @@ import androidx.appcompat.widget.Toolbar; // to compat lower version
 import com.anu.sample_dao.R;
 
 
-public class ToolbarActivity extends AppCompatActivity {
+public class Sample_ToolbarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,14 +19,14 @@ public class ToolbarActivity extends AppCompatActivity {
 
         // 1 - show toolbar
         // Find the toolbar view inside the activity layout
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
 
         // it cause program crash
         // check logcat
         // add this line in Manifest.xml android:theme="@style/Theme.Design.Light.NoActionBar"
-        // to get rid of original toobar
+        // to get rid of original action bar
         setSupportActionBar(toolbar);
 
 

@@ -21,4 +21,10 @@
     <string name="user_sign_up">Sign Up</string>
     <string name="user_sign_in">Sign In</string>
     <string name="about_store">Store</string>
+
+    <string name="chk_hello">Hello World, MyAndroidAppActivity!</string>
+    <string name="chk_ios">IPhone</string>
+    <string name="chk_android">Android</string>
+    <string name="chk_windows">Windows Mobile</string>
+    <string name="chk_display">Display</string>
 </resources>

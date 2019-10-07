@@ -10,7 +10,7 @@ import com.anu.sample_dao.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
-public class BottomNavActivity extends AppCompatActivity {
+public class Sample_BottomNavActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
