@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38fa95c0-ea77-4775-ad7e-860e86acd158" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/androidTest/java/com/raywenderlich/petmedicinereminder/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/assets/rw_pet_reminder_sample.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/ic_launcher-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/AppGlobalReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainContracts.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/PetRx.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/SplashActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/DataUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/ReminderContract.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/ReminderData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/ReminderDbHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/SampleDataHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/notif/AlarmReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/notif/AlarmScheduler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/notif/BootReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/notif/NotificationHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/reminder/Model.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/reminder/Presenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/reminder/ReminderContracts.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/reminder/ReminderDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-hdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-hdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-hdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-hdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-hdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-hdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-hdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-mdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-mdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-mdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-mdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-mdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-mdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-mdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xhdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xhdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xhdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xhdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xhdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xhdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xhdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxhdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxhdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxhdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxhdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxhdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxhdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxhdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxxhdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxxhdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxxhdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxxhdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxxhdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxxhdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable-xxxhdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable/ic_add_white_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable/ic_check_white_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/drawable/splash_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/layout/fragment_reminder_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/layout/layout_reminder_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/menu/menu_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/menu/menu_reminder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/values/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/app/src/test/java/com/raywenderlich/petmedicinereminder/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Finished/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/androidTest/java/com/raywenderlich/petmedicinereminder/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/assets/rw_pet_reminder_sample.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/ic_launcher-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/AppGlobalReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainContracts.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/MainPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/PetRx.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/SplashActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/DataUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/ReminderContract.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/ReminderData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/ReminderDbHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/data/SampleDataHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/notif/AlarmReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/notif/AlarmScheduler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/notif/BootReceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/notif/NotificationHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/reminder/Model.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/reminder/Presenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/reminder/ReminderContracts.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/kotlin/com.raywenderlich.petmedicinereminder/reminder/ReminderDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-hdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-hdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-hdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-hdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-hdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-hdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-hdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-mdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-mdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-mdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-mdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-mdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-mdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-mdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xhdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xhdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xhdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xhdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xhdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xhdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xhdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxhdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxhdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxhdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxhdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxhdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxhdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxhdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxxhdpi/baseline_close_white_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxxhdpi/baseline_done_black_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxxhdpi/cat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxxhdpi/dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxxhdpi/ic_razewarelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxxhdpi/ic_stat_medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable-xxxhdpi/other.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable/ic_add_white_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable/ic_check_white_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/drawable/splash_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/layout/fragment_reminder_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/layout/layout_reminder_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/menu/menu_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/menu/menu_reminder.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/values/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/app/src/test/java/com/raywenderlich/petmedicinereminder/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetMedicineReminder-Starter/settings.gradle" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="80" />
+    <option name="y" value="23" />
+    <option name="width" value="1427" />
+    <option name="height" value="762" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PetMedicineReminder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PetMedicineReminder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PetMedicineReminder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PetMedicineReminder" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PetMedicineReminder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PetMedicineReminder" type="462c0819:PsiDirectoryNode" />
+              <item name="PetMedicineReminder-Starter" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38fa95c0-ea77-4775-ad7e-860e86acd158" name="Default Changelist" comment="" />
+      <created>1570843691254</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570843691254</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="80" y="23" width="1427" height="762" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.329303" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
