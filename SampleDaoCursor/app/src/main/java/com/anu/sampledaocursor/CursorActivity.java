@@ -77,10 +77,9 @@ public class CursorActivity extends AppCompatActivity {
                                 er.deleteOneEvent(selectedEvent);
 
 
-                                // refresh the activity
-                                Intent intent = getIntent();
-                                finish();
-                                startActivity(intent);
+                                // refresh the activity without animation
+                                recreate();
+
                             }
                         })
                         .setNegativeButton("No",null)
