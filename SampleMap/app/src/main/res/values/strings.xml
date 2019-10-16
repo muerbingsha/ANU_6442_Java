@@ -1,4 +1,31 @@
 <resources>
     <string name="app_name">SampleMap</string>
     <string name="title_activity_maps">Map</string>
+    <string name="search_hint">Select a location</string>
+    <string name="app_label">GoodSample</string>
+
+
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=69:11:8E:A9:66:1A:3F:2C:37:05:C4:97:55:B2:E6:78:4C:5C:BA:34%3Bcom.anu.samplemap
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    69:11:8E:A9:66:1A:3F:2C:37:05:C4:97:55:B2:E6:78:4C:5C:BA:34
+
+    SHA-1 certificate fingerprint:
+    69:11:8E:A9:66:1A:3F:2C:37:05:C4:97:55:B2:E6:78:4C:5C:BA:34
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <!-- This API is valid for Map and Places -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAWmtG6idRoKm1FA45s7OlYImda0QXHnc4</string>
 </resources>

@@ -40,4 +40,7 @@ dependencies {
 
     // Places
     implementation 'com.google.android.libraries.places:places:2.0.0'
+
+    // BottomNavigationView
+    implementation 'com.google.android.material:material:1.0.0'
 }

@@ -7,9 +7,11 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -39,7 +41,7 @@ public class EnterActivity extends AppCompatActivity {
 
     private static final int LOCATION_REQUEST_CODE = 1000;
     private FusedLocationProviderClient mFusedLocationClient;
-    private double wayLatitude = 0.0, wayLongitude = 0.0;
+    private double myLat = 0.0, myLon = 0.0;
     private TextView txtLocation;
     private LocationRequest locationRequest;
     private LocationCallback locationCallback;
@@ -73,37 +75,37 @@ public class EnterActivity extends AppCompatActivity {
 
             // 1 method 1
             // Initialize the SDK
-            String apiKey = "AIzaSyAWmtG6idRoKm1FA45s7OlYImda0QXHnc4";
-            Places.initialize(getApplicationContext(), apiKey);
-
-            // Create a new Places client instance
-            PlacesClient placesClient = Places.createClient(this);
-
-            // Use fields to define the data types to return.
-            List<Place.Field> placeFields = Collections.singletonList(Place.Field.NAME);
-
-            // Use the builder to create a FindCurrentPlaceRequest.
-            FindCurrentPlaceRequest request = FindCurrentPlaceRequest.newInstance(placeFields);
-
-            // task
-            Task<FindCurrentPlaceResponse> placeResponse = placesClient.findCurrentPlace(request);
-            placeResponse.addOnCompleteListener(task -> {
-                if (task.isSuccessful()){
-                    FindCurrentPlaceResponse response = task.getResult();
-                    List<PlaceLikelihood> placeLikelihoods = response.getPlaceLikelihoods();
-                    for (PlaceLikelihood p: placeLikelihoods) {
-                        System.out.println(p.getPlace().getName());
-                    }
-
-
-                } else {
-                    Exception exception = task.getException();
-                    if (exception instanceof ApiException) {
-                        ApiException apiException = (ApiException) exception;
-                        Log.e("Shark", "Place not found: " + apiException.getStatusCode());
-                    }
-                }
-            });
+//            String apiKey = "AIzaSyAWmtG6idRoKm1FA45s7OlYImda0QXHnc4";
+//            Places.initialize(getApplicationContext(), apiKey);
+//
+//            // Create a new Places client instance
+//            PlacesClient placesClient = Places.createClient(this);
+//
+//            // Use fields to define the data types to return.
+//            List<Place.Field> placeFields = Collections.singletonList(Place.Field.NAME);
+//
+//            // Use the builder to create a FindCurrentPlaceRequest.
+//            FindCurrentPlaceRequest request = FindCurrentPlaceRequest.newInstance(placeFields);
+//
+//            // task
+//            Task<FindCurrentPlaceResponse> placeResponse = placesClient.findCurrentPlace(request);
+//            placeResponse.addOnCompleteListener(task -> {
+//                if (task.isSuccessful()){
+//                    FindCurrentPlaceResponse response = task.getResult();
+//                    List<PlaceLikelihood> placeLikelihoods = response.getPlaceLikelihoods();
+//                    for (PlaceLikelihood p: placeLikelihoods) {
+//                        System.out.println(p.getPlace().getName());
+//                    }
+//
+//
+//                } else {
+//                    Exception exception = task.getException();
+//                    if (exception instanceof ApiException) {
+//                        ApiException apiException = (ApiException) exception;
+//                        Log.e("Shark", "Place not found: " + apiException.getStatusCode());
+//                    }
+//                }
+//            });
 
 
 
@@ -112,6 +114,43 @@ public class EnterActivity extends AppCompatActivity {
             // method 2
             // Construct a FusedLocationProviderClient.
             mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+
+
+            // reqeust
+            locationRequest = LocationRequest.create();
+            locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+            locationRequest.setInterval(20 * 1000);
+
+            // callback
+            locationCallback = new LocationCallback() {
+                @Override
+                public void onLocationResult(LocationResult locationResult) {
+                    if (locationResult == null) {
+                        System.out.println("nothing");
+                        return;
+                    }
+                    for (Location location : locationResult.getLocations()) {
+                        if (location != null) {
+                            System.out.println("good");
+                            myLat = location.getLatitude();
+                            myLon = location.getLongitude();
+//                            txtLocation.setText(String.format(Locale.US, "%s -- %s", myLat, myLon));
+                        }
+                    }
+                }
+            };
+
+            // set update
+            mFusedLocationClient.requestLocationUpdates(locationRequest, locationCallback,  Looper.myLooper());
+
+            // remove request or it will take resources
+            if (mFusedLocationClient != null) {
+                mFusedLocationClient.removeLocationUpdates(locationCallback);
+            }
+
+
+            // get current location
             Task<Location> task = mFusedLocationClient.getLastLocation();
             task.addOnSuccessListener(new OnSuccessListener<Location>() {
                 @Override
@@ -119,6 +158,16 @@ public class EnterActivity extends AppCompatActivity {
                     if(location!=null) {
                         //Write your implemenation here
                         Log.d("AndroidClarified",location.getLatitude()+" "+location.getLongitude());
+
+                        // enter map activity
+
+
+                        Intent intent = new Intent(EnterActivity.this, MapsActivity.class);
+                        intent.putExtra(GlobalConstant.LAT.toString(), location.getLatitude());
+                        intent.putExtra(GlobalConstant.LON.toString(), location.getLongitude());
+                        startActivity(intent);
+
+
                         txtLocation.setText(location.getLatitude()+" "+location.getLongitude());
                     }
                 }
@@ -126,34 +175,33 @@ public class EnterActivity extends AppCompatActivity {
 
 
 
-
             // method 3
             // not working
-            this.txtLocation = (TextView) findViewById(R.id.textView);
-            mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-            locationRequest = LocationRequest.create();
-            locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-            locationRequest.setInterval(20 * 1000);
-
-            locationCallback = new LocationCallback() {
-                @Override
-                public void onLocationResult(LocationResult locationResult) {
-                    if (locationResult == null) {
-                        return;
-                    }
-                    for (Location location : locationResult.getLocations()) {
-                        if (location != null) {
-                            wayLatitude = location.getLatitude();
-                            wayLongitude = location.getLongitude();
-                            txtLocation.setText(String.format(Locale.US, "%s -- %s", wayLatitude, wayLongitude));
-                        }
-                    }
-                }
-            };
-
-            if (mFusedLocationClient != null) {
-                mFusedLocationClient.removeLocationUpdates(locationCallback);
-            }
+//            this.txtLocation = (TextView) findViewById(R.id.textView);
+//            mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+//            locationRequest = LocationRequest.create();
+//            locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+//            locationRequest.setInterval(20 * 1000);
+//
+//            locationCallback = new LocationCallback() {
+//                @Override
+//                public void onLocationResult(LocationResult locationResult) {
+//                    if (locationResult == null) {
+//                        return;
+//                    }
+//                    for (Location location : locationResult.getLocations()) {
+//                        if (location != null) {
+//                            wayLatitude = location.getLatitude();
+//                            wayLongitude = location.getLongitude();
+//                            txtLocation.setText(String.format(Locale.US, "%s -- %s", wayLatitude, wayLongitude));
+//                        }
+//                    }
+//                }
+//            };
+//
+//            if (mFusedLocationClient != null) {
+//                mFusedLocationClient.removeLocationUpdates(locationCallback);
+//            }
 
 
 
@@ -225,9 +273,9 @@ public class EnterActivity extends AppCompatActivity {
                             }
                             for (Location location : locationResult.getLocations()) {
                                 if (location != null) {
-                                    wayLatitude = location.getLatitude();
-                                    wayLongitude = location.getLongitude();
-                                    txtLocation.setText(String.format(Locale.US, "%s -- %s", wayLatitude, wayLongitude));
+                                    myLat = location.getLatitude();
+                                    myLon = location.getLongitude();
+                                    txtLocation.setText(String.format(Locale.US, "%s -- %s", myLat, myLon));
                                 }
                             }
                         }
