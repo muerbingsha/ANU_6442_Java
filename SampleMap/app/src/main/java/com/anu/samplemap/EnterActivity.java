@@ -1,14 +1,16 @@
 package com.anu.samplemap;
 
-import androidx.annotation.LongDef;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
@@ -17,34 +19,40 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.Geofence;
+import com.google.android.gms.location.GeofencingClient;
+import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.libraries.places.api.Places;
-import com.google.android.libraries.places.api.model.Place;
-import com.google.android.libraries.places.api.model.PlaceLikelihood;
-import com.google.android.libraries.places.api.net.FindCurrentPlaceRequest;
-import com.google.android.libraries.places.api.net.FindCurrentPlaceResponse;
-import com.google.android.libraries.places.api.net.PlacesClient;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 public class EnterActivity extends AppCompatActivity {
 
 
-    private static final int LOCATION_REQUEST_CODE = 1000;
+    // Get Current Location
     private FusedLocationProviderClient mFusedLocationClient;
-    private double myLat = 0.0, myLon = 0.0;
     private TextView txtLocation;
     private LocationRequest locationRequest;
     private LocationCallback locationCallback;
+
+
+    // GeoFence
+    private GeofencingClient geofencingClient;
+    private Geofence geofence;
+    List geofenceList = new ArrayList();
+
 
 
     @Override
@@ -56,21 +64,85 @@ public class EnterActivity extends AppCompatActivity {
         txtLocation = findViewById(R.id.textView);
 
 
-    }
+        /**
+         * geofence
+         */
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED  &&
+                ContextCompat.checkSelfPermission(this,
+                        Manifest.permission.ACCESS_BACKGROUND_LOCATION) == PackageManager.PERMISSION_GRANTED)
+        {
 
-    public void setLocation(View view) {
+
+
+            // geoFence client
+            geofencingClient = LocationServices.getGeofencingClient(this);
+
+            // create one geofence
+            geofence = new Geofence.Builder()
+                    // Set the request ID of the geofence. This is a string to identify this
+                    // geofence.
+                    .setRequestId(Constants.GEOFENCE_REQEST_ID) // entry.getKey() can be eventId
+
+                    .setCircularRegion(
+                            Constants.SAMPLE_LAT,
+                            Constants.SAMPLE_LON,
+                            Constants.GEOFENCE_RADIUS_IN_METERS
+                    )
+                    .setExpirationDuration(Constants.GEOFENCE_EXPIRATION_IN_MILLISECONDS)
+                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER |
+                            Geofence.GEOFENCE_TRANSITION_EXIT)
+                    .build();
+
+            // add to list
+            geofenceList.add(geofence);
+
+
+            GeofencingRequest request = new GeofencingRequest.Builder()
+                    // Notification to trigger when the Geofence is created
+                    .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
+                    .addGeofences(geofenceList) // add a Geofence
+                    .build();
+
+
+            geofencingClient.addGeofences(request, getGeofencePendingIntent())
+                    .addOnSuccessListener(this, new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            // Geofences added
+                            // ...
+
+                            System.out.println("Gooood!!!!Gooood!!!!Gooood!!!!");
+                            System.out.println("Gooood!!!!");
+                        }
+                    })
+                    .addOnFailureListener(this, new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Failed to add geofences
+                            // ...
+                        }
+                    });
+
+
+        } else {
+            getBackLocPermission();
+        }
 
 
 
 
 
 
+
+
+        /**
+         * get curent location
+         */
         // Call findCurrentPlace and handle the response (first check that the user has granted permission).
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
 
             System.out.println("location permitted");
-
-
 
 
             // 1 method 1
@@ -133,8 +205,8 @@ public class EnterActivity extends AppCompatActivity {
                     for (Location location : locationResult.getLocations()) {
                         if (location != null) {
                             System.out.println("good");
-                            myLat = location.getLatitude();
-                            myLon = location.getLongitude();
+                            Constants.CURRENT_LAT = location.getLatitude();
+                            Constants.CURRENT_LON = location.getLongitude();
 //                            txtLocation.setText(String.format(Locale.US, "%s -- %s", myLat, myLon));
                         }
                     }
@@ -159,15 +231,10 @@ public class EnterActivity extends AppCompatActivity {
                         //Write your implemenation here
                         Log.d("AndroidClarified",location.getLatitude()+" "+location.getLongitude());
 
+                        Constants.CURRENT_LAT = location.getLatitude();
+                        Constants.CURRENT_LON = location.getLongitude();
+
                         // enter map activity
-
-
-                        Intent intent = new Intent(EnterActivity.this, MapsActivity.class);
-                        intent.putExtra(GlobalConstant.LAT.toString(), location.getLatitude());
-                        intent.putExtra(GlobalConstant.LON.toString(), location.getLongitude());
-                        startActivity(intent);
-
-
                         txtLocation.setText(location.getLatitude()+" "+location.getLongitude());
                     }
                 }
@@ -175,43 +242,48 @@ public class EnterActivity extends AppCompatActivity {
 
 
 
-            // method 3
-            // not working
-//            this.txtLocation = (TextView) findViewById(R.id.textView);
-//            mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-//            locationRequest = LocationRequest.create();
-//            locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-//            locationRequest.setInterval(20 * 1000);
-//
-//            locationCallback = new LocationCallback() {
-//                @Override
-//                public void onLocationResult(LocationResult locationResult) {
-//                    if (locationResult == null) {
-//                        return;
-//                    }
-//                    for (Location location : locationResult.getLocations()) {
-//                        if (location != null) {
-//                            wayLatitude = location.getLatitude();
-//                            wayLongitude = location.getLongitude();
-//                            txtLocation.setText(String.format(Locale.US, "%s -- %s", wayLatitude, wayLongitude));
-//                        }
-//                    }
-//                }
-//            };
-//
-//            if (mFusedLocationClient != null) {
-//                mFusedLocationClient.removeLocationUpdates(locationCallback);
-//            }
-
-
-
         } else {
             getLocationPermission();
         }
+
+
     }
 
 
 
+
+    /**
+     * get pending intent
+     */
+    private PendingIntent geofencePendingIntent;
+    private PendingIntent getGeofencePendingIntent() {
+        // Reuse the PendingIntent if we already have it.
+        if (geofencePendingIntent != null) {
+            return geofencePendingIntent;
+        }
+        Intent intent = new Intent(this, GeofenceBroadcastReceiver.class);
+        // We use FLAG_UPDATE_CURRENT so that we get the same pending intent back when
+        // calling addGeofences() and removeGeofences().
+        geofencePendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.
+                FLAG_UPDATE_CURRENT);
+        return geofencePendingIntent;
+    }
+
+
+    /**
+     * jump to mapview
+     * @param view
+     */
+    public void setLocation(View view) {
+        Intent intent = new Intent(EnterActivity.this, MapsActivity.class);
+        startActivity(intent);
+
+    }
+
+
+    /**
+     * code snippet to get location permission
+     */
     private void getLocationPermission() {
 
         // A local method to request required permissions;
@@ -230,7 +302,7 @@ public class EnterActivity extends AppCompatActivity {
             // No explanation needed; request the permission
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    LOCATION_REQUEST_CODE);
+                    Constants.LOCATION_REQUEST_CODE);
 
 
             // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
@@ -240,8 +312,36 @@ public class EnterActivity extends AppCompatActivity {
     }
 
 
+
+
+
+    private void getBackLocPermission() {
+
+        // A local method to request required permissions;
+        // See https://developer.android.com/training/permissions/requesting
+//            getLocationPermission();
+
+        // Permission is not granted
+        // Should we show an explanation?
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)) {
+            // Show an explanation to the user *asynchronously* -- don't block
+            // this thread waiting for the user's response! After the user
+            // sees the explanation, try again to request the permission.
+        } else {
+            // No explanation needed; request the permission
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_BACKGROUND_LOCATION},
+                    Constants.BACK_LOC_REQUEST_CODE);
+
+            // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+            // app-defined int constant. The callback method gets the
+            // result of the request.
+        }
+    }
+
     /**
-     * get called when
+     * get called when first request permission
      * @param requestCode
      * @param permissions
      * @param grantResults
@@ -252,7 +352,7 @@ public class EnterActivity extends AppCompatActivity {
 
 
         switch (requestCode) {
-            case LOCATION_REQUEST_CODE: {
+            case Constants.LOCATION_REQUEST_CODE: {
 
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
@@ -273,9 +373,11 @@ public class EnterActivity extends AppCompatActivity {
                             }
                             for (Location location : locationResult.getLocations()) {
                                 if (location != null) {
-                                    myLat = location.getLatitude();
-                                    myLon = location.getLongitude();
-                                    txtLocation.setText(String.format(Locale.US, "%s -- %s", myLat, myLon));
+
+                                    Constants.CURRENT_LAT = location.getLatitude();
+                                    Constants.CURRENT_LON = location.getLongitude();
+
+                                    txtLocation.setText(String.format(Locale.US, "%s -- %s", Constants.CURRENT_LAT , Constants.CURRENT_LON ));
                                 }
                             }
                         }
@@ -290,6 +392,8 @@ public class EnterActivity extends AppCompatActivity {
                 }
                 break;
             }
+
+
         }
     }
 }
