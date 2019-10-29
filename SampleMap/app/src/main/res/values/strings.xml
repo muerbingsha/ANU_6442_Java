@@ -27,5 +27,5 @@
     string in this file.
     -->
     <!-- This API is valid for Map and Places -->
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAWmtG6idRoKm1FA45s7OlYImda0QXHnc4</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">YOUR API</string>
 </resources>
